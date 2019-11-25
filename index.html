@@ -4,8 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>БИТ</title>
     <link rel="stylesheet" type="text/css" href="style.css" >
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="js\jquery.maskedinput.min.js"></script>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
  <script type="text/javascript">
 	 $(function() {
 	 $(window).scroll(function() {
@@ -40,24 +42,31 @@
  </script>
 </head>
 <body>
-	<div class="fon_1">
-		<img class="men" src="images\fon_1.jpg" alt="главная картинка">
-		<table class="cap">
-			<tr>
-				<td class = "logo"><img src="images\logo.png" alt="логотип БИТ"></td>
-				<td class = "cap_icon"><img src="images\location.png" alt="адрес БИТ"></td>
-				<td class = "cap_text">г.Рязань, ул.Октябрьская, д.61<br>www.bit-it.ru</td>
-				<td class = "cap_icon"><img src="images\call.png" alt="телефон БИТ"></td>
-				<td class = "cap_text">+7(4912)466-099, +7(495)662-87-41<br>bit@bit-it.ru</td>
-				<td class = "cap_button" id = "menu"><a href="#yak1"><button>Заказать звонок</button></a></td>
-			</tr>
-		</table>
+	<div class="container fon_1">
+		<div class="row cap">
+			<div class="col-lg-4 col-sm-4">
+				<img class="logo" src="images\logo.png" alt="логотип БИТ">
+			</div>
+			<div class="col-lg-1 col-sm-1 icon-wrapper">
+				<img class="addr-icon" src="images\location.png" align="right" alt="адрес БИТ">
+			</div>
+			<p class="cap_text col-lg-2 col-sm-2">г.Рязань, ул.Октябрьская, д.61<br>www.bit-it.ru</p>
+			<div class="col-lg-1 col-sm-1 icon-wrapper">
+				<img class="cap_icon" src="images\call.png" align="right" alt="телефон БИТ">
+			</div>
+			<p class="cap_text col-lg-2 col-sm-2">+7(4912)466-099,+7(495)662-87-41<br>bit@bit-it.ru</p>
+			<div class="col-lg-2 col-sm-2">
+				<a class="cap_button" id="menu" href="#yak1"><button class="order-call">Заказать звонок</button></a>
+			</div>
+		</div>
 		<div class="mob_place">
 			<h1>Мобильное рабочее место аудитора</h1><br>
 			Эффективное проведение аудитов и проверок на предприятии. Предназначено для проведения внутренних аудитов, проверок, <br>испытаний на соответствие стандартам и требованиям<br>по запланированной программе<br><br>
 			<div id = "menu1"><a href="#yak1"><button>Оставить заявку</button></a></div>
 		</div>
 	</div>
+	<!--
+	<div class="container">
 	<div class="rz_2">
 		<img src="images\fon_2.png" alt="фон">
 		<table class="str1">
@@ -228,6 +237,7 @@
 			</tr>
 		</table>
 	</div>
+	</div>-->
 <DIV ID = "toTop"><img class="toTop" src="images\totop.png" alt="Стрелка" title="Наверх"></DIV>
 </body>
 
