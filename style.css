@@ -5,7 +5,7 @@
 	}
 	
 .fon_1  {
-	padding-top: 30px;
+	padding: 50px 50px 0 50px !important;
 	height: 754px;
 	background-image: url(images/fon_1.jpg);
 }
@@ -22,31 +22,18 @@
 }
 
 .logo {
+	display: block;
 	width: 185px;
-	margin-left: 65px;
+	margin: 0 auto;
 }	
-
-.order-call {
-	margin-left: 20px;
-}
 
 .addr-icon, 
 .cap_icon, 
 .cap_text, 
-.order-call {
+.call {
 	margin-top: 15px;	
 }
-	
-.addr-icon, 
-.cap_icon{
-	margin-right: 10px;
-} 
 
-.icon-wrapper{
-	width: 50px !important;
-	border: 1px dotted red;
-}
-	
 /* иряър */
 
 .cap td.logo{
@@ -67,8 +54,8 @@
 	width: 260px;
 	font-size: 12px;
 	font-family: arial;
-	padding-left: 10px;
-	}
+	padding: 0 !important;
+}
 
 .cap td.cap_button{
 	width: 200px;
