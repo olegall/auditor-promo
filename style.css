@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	}
-	
+
 .fon_1  {
 	padding: 50px 50px 0 50px !important;
 	height: 754px;
@@ -34,22 +34,53 @@
 	margin-top: 15px;	
 }
 
-.title {
+.fon_1 .title {
 	margin-top: 100px;
 }
 
-.description{
+.fon_1 .description {
 	font-family: arial;
 	font-size: 16px;
 }
 
-.claim-btn{
+.claim-btn {
 	background: #1175c0;
     color: white;
     border: none;
     width: 250px;
     font-size: 20px;
     height: 60px;	
+}
+
+.second {
+	background: url(images/fon_2.png) no-repeat;
+}
+
+.second .item {
+	text-align: center;
+}
+
+.second .title {
+	font-size: 26px;	
+}
+
+.second .icons {
+	margin-bottom: 100px;
+}
+
+.second .icons p {
+	font-family: arial;
+}
+
+.second .description {
+	color: #8e8e8e;
+	line-height: 250%;
+	font-size: 18px;
+	font-family: arial;
+}
+
+.device-wrapper {
+	text-align: right;
 }
 
 @media (max-width: 768px) {
@@ -62,7 +93,10 @@
 		display: block;
 		margin: 0 auto;
 	}	
-
+	
+	.device-wrapper{
+		text-align: center;
+	}	
 }
 
 @media (max-width: 580px) {
@@ -81,6 +115,10 @@
 		display: block;
 		margin: 0 auto;		
 	}
+	
+	.icons {
+		background: rgb(216, 244, 255);
+	}	
 }
 
 /* иряър */
