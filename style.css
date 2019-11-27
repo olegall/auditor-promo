@@ -34,6 +34,55 @@
 	margin-top: 15px;	
 }
 
+.title {
+	margin-top: 100px;
+}
+
+.description{
+	font-family: arial;
+	font-size: 16px;
+}
+
+.claim-btn{
+	background: #1175c0;
+    color: white;
+    border: none;
+    width: 250px;
+    font-size: 20px;
+    height: 60px;	
+}
+
+@media (max-width: 768px) {
+	.title {
+		text-align: center;
+		margin-top: 50px;
+	}
+
+	.claim-btn {
+		display: block;
+		margin: 0 auto;
+	}	
+
+}
+
+@media (max-width: 580px) {
+	.icon-wrapper {
+		width: 10% !important;
+	}	
+	.cap_text{
+		width: 90% !important;
+	}
+	.cap_button{
+		display: block;
+		width: 100%;
+
+	}
+	.call{
+		display: block;
+		margin: 0 auto;		
+	}
+}
+
 /* иряър */
 
 .cap td.logo{

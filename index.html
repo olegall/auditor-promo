@@ -7,6 +7,7 @@
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="js\jquery.maskedinput.min.js"></script>
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
  <script type="text/javascript">
 	 $(function() {
@@ -47,11 +48,11 @@
 			<div class="col-lg-3">
 				<img class="logo" src="images\logo.png" alt="логотип БИТ">
 			</div>
-			<div class="col-lg-1 col-sm-1">
+			<div class="icon-wrapper col-lg-1 col-sm-1">
 				<img class="addr-icon" src="images\location.png" align="right" alt="адрес БИТ">
 			</div>
 			<p class="cap_text col-lg-2 col-sm-3">г.Рязань, ул.Октябрьская, д.61<br>www.bit-it.ru</p>
-			<div class="col-lg-1 col-sm-1">
+			<div class="icon-wrapper col-lg-1 col-sm-1">
 				<img class="cap_icon" src="images\call.png" align="right" alt="телефон БИТ">
 			</div>
 			<p class="cap_text col-lg-3 col-sm-3">+7(4912)466-099,+7(495)662-87-41<br>bit@bit-it.ru</p>
@@ -59,11 +60,18 @@
 				<a class="cap_button" id="menu" href="#yak1"><button class="call">Заказать звонок</button></a>
 			</div>
 		</div>
-		<div class="mob_place">
-			<h1>Мобильное рабочее место аудитора</h1><br>
-			Эффективное проведение аудитов и проверок на предприятии. Предназначено для проведения внутренних аудитов, проверок, <br>испытаний на соответствие стандартам и требованиям<br>по запланированной программе<br><br>
-			<div id = "menu1"><a href="#yak1"><button>Оставить заявку</button></a></div>
+		<div class="row">
+			<h1 class="title col-lg-6">Мобильное рабочее место аудитора</h1>
 		</div>
+		<div class="row">
+			<div class="description col-lg-6">
+				Эффективное проведение аудитов и проверок на предприятии. 
+				Предназначено для проведения внутренних аудитов, проверок, 
+				<br>испытаний на соответствие стандартам и требованиям
+				<br>по запланированной программе<br><br>
+				<button class="claim-btn">Оставить заявку</button>
+			</div>
+		</div>		
 	</div>
 	<!--
 	<div class="container">
