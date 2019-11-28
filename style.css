@@ -52,7 +52,28 @@
     height: 60px;	
 }
 
+.cap_text {
+	width: 260px;
+	font-size: 12px;
+	font-family: arial;
+	padding: 0 !important;
+}
+
+.cap button {
+	background: #1175c0;
+	color: white;
+	border: none;
+	width:150px;
+	height:35px;
+}
+
+
+
+
+
+
 .second {
+	margin-bottom: 50px;
 	background: url(images/fon_2.png) no-repeat;
 }
 
@@ -83,6 +104,55 @@
 	text-align: right;
 }
 
+
+
+
+
+.options {
+	margin-bottom: 50px;
+}
+
+.options .item {
+	text-align: center;
+	padding: 70px 0 70px 0;
+	font-size: 22px;
+    font-family: arial;
+}
+
+.options .item img {
+	margin-bottom: 20px;
+}
+
+.options .first {
+	text-transform: uppercase;	
+	font-size: 32px;
+    letter-spacing: 1px;
+	line-height: 2;
+}
+
+.options .first span {
+	color: #1176be;
+	font-weight: 750;
+}
+
+.options p, .options h2{
+	margin: 0;
+}
+
+.options .row:first-child {
+	border-top: 1px solid #bbbbbb;
+	border-bottom: 1px solid #bbbbbb;
+}
+
+.options .row:last-child {
+	border-bottom: 1px solid #bbbbbb;
+}
+
+.options .center{
+	border-left: 1px solid #bbbbbb;	
+	border-right: 1px solid #bbbbbb;
+}
+
 @media (max-width: 768px) {
 	.title {
 		text-align: center;
@@ -97,6 +167,19 @@
 	.device-wrapper{
 		text-align: center;
 	}	
+	
+	.options .item {
+		max-width: 100%;
+		flex: none;
+		border: 0;
+		border-bottom: 1px solid #bbbbbb;
+		padding: 30px 0 30px 0;
+	}
+	
+	.options .row:first-child,
+	.options .row:last-child {
+		border: 0;
+	}
 }
 
 @media (max-width: 580px) {
@@ -121,64 +204,7 @@
 	}	
 }
 
-/* Шапка */
 
-.cap td.logo{
-	width: 550px;
-	padding-left:20px;
-	}
-
-.cap td.logo img{
-	height: 75px;
-	padding-left:30px;
-	}
-
-.cap td.cap_icon img{
-	width: 40px;
-	}
-
-.cap_text{
-	width: 260px;
-	font-size: 12px;
-	font-family: arial;
-	padding: 0 !important;
-}
-
-.cap td.cap_button{
-	width: 200px;
-	text-align: center;
-	}
-.cap button{
-	background: #1175c0;
-	color: white;
-	border: none;
-	width:150px;
-	height:35px;}
-
-.mob_place{
-	width: 500px;
-	position: relative;
-	bottom:650px;
-	padding-left: 50px;
-	font-size: 16px;
-	font-family: arial;
-	line-height: 160%;
-	}
-.mob_place h1{
-	font-size: 30px;
-	}
-.mob_place button{
-	background: #1175c0;
-	color: white;
-	border: none;
-	width:250px;
-	font-size:20px;
-	height:60px;
-	}
-
-.rz_2 {height:850px}
-
-.rz_3 {height:600px}
 
 .rz_4 {height:260px;}
 
@@ -193,101 +219,6 @@
 .rz_8 img{width: 1200px;
 	
 	position: relative;}
-
-/*Строка 1 */
-.str1	{
-	border:0;
-	table-layout: fixed;
-	position: relative;
-	bottom:320px;
-	height: 175px;
-
-	}
-
-.str1 td img{
-	width: 80px;
-	margin-bottom:15px;}
-
-.str1 td {
-	width: 400px;
-	font-size: 16px;
-	font-family: arial;
-	text-align: center;
-	vertical-align: top;
-	}
-/*Строка 2 */
-.str2	{
-	border:0;
-	table-layout: fixed;
-	position: relative;
-	bottom:240px;
-	height: 175px;
-	font-size: 18px;
-	font-family: arial;
-	color:#8e8e8e;
-	line-height: 250%;
-
-	}
-
-.str2 td.str2_image img{
-	vertical-align: 10px;
-	}
-
-.str2 td.str2_image {
-	width: 500px;
-	text-align: right;
-	vertical-align: top;	
-
-	}
-
-.str2 td.str2_text {
-	padding: 0 30px;
-	letter-spacing:-0.7px;
-	}
-.str2 td.str2_text h1{
-	font-size: 26px;
-	color:black;
-}
-
-/*Строка 3 */
-.str3	{
-
-	table-layout: fixed;
-	position: relative;
-	bottom:600px;
-	height: 300px;
-	padding: 0 30px;
-	}
-
-.fon_3	{
-	position: relative;
-	
-	}
-.str3 td img{
-	width: 100px;
-	margin-bottom:15px;}
-
-.str3 td {
-	width: 400px;
-	font-size: 22px;
-	font-family: arial;
-	text-align: center;
-	vertical-align: middle;
-	}
-
-.str3 td h1{
-	font-size: 32px;
-	color:#1176be;
-	font-weight: 750;
-	letter-spacing:1px;
-	margin: 0;
-	}
-
-.str3 td h2{
-	font-size: 32px;
-	margin: 0;
-	font-weight: 100;
-	}
 
 /*Строка 4 */
 .str4 td.gift {
