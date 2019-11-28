@@ -153,6 +153,72 @@
 	border-right: 1px solid #bbbbbb;
 }
 
+
+
+
+
+
+.free .description {
+    padding-top: 60px;
+    text-align: center;
+	font-family: arial;
+	font-size: 18px;
+}
+
+.button-container {
+    text-align: center;
+	padding-top: 55px;
+}
+
+.free {
+	margin-bottom: 50px;
+}
+
+.free button {
+	width: 200px;	
+    height: 50px;
+    background: #1175c0;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+
+
+
+
+
+.infrastructure {
+	border-top: 1px solid #bbbbbb;
+	border-bottom: 1px solid #bbbbbb;
+	margin-bottom: 50px;
+}
+
+.infrastructure .description {
+    font-size: 1.3rem;
+    padding: 50px 30px 0 30px;
+	border-right: 1px solid #bbbbbb;
+	margin: 0;
+}
+
+.infrastructure .diagram {
+    background: #d6f4ff;
+    text-align: right;
+    font-size: 18px;
+}
+
+.infrastructure img {
+	display: block;
+	margin: 0 auto;
+}
+
+@media (max-width: 991px){
+	.infrastructure .description {
+		border: 0;
+		text-align: center;
+		padding: 30px;
+	}
+}
+
 @media (max-width: 768px) {
 	.title {
 		text-align: center;
@@ -180,6 +246,11 @@
 	.options .row:last-child {
 		border: 0;
 	}
+	
+	.free img {
+		display: block;
+		margin: 0 auto;
+	}
 }
 
 @media (max-width: 580px) {
@@ -202,13 +273,11 @@
 	.icons {
 		background: rgb(216, 244, 255);
 	}	
+	
+	.infrastructure img {
+		width: 80%;
+	}
 }
-
-
-
-.rz_4 {height:260px;}
-
-.rz_5 {height:1000px;}
 
 .rz_6 {height:0px;}
 
@@ -219,63 +288,6 @@
 .rz_8 img{width: 1200px;
 	
 	position: relative;}
-
-/*Строка 4 */
-.str4 td.gift {
-	width: 750px;
-	padding: 40px 0;
-	text-align: center;}
-
-.str4  button{
-	background: #1175c0;
-	color: white;
-	border: none;
-	width:200px;
-	font-size:20px;
-	height:50px;
-	margin-left: 70px;}
-
-.str4_text {
-	width: 400px;
-	font-size: 18px;
-	font-family: arial;
-	line-height: 150%;
-	position: relative;
-	bottom:160px;
-	margin-left:380px;}
-
-/*Строка 5 */
-
-
-.fon_4	{
-	position: relative;}
-
-.str5 {height:400px;
-	bottom:1000px;			
-	position: relative;	}
-.str5 td {
-	width: 600px;
-	font-size: 24px;
-	font-family: arial;
-	vertical-align: middle;
-	}
-
-.str5 td.rz_5_1{
-
-	letter-spacing:0.5px;
-	padding: 0 25px;
-	line-height: 200%;
-	}
-
-.str5 td.rz_5_2{
-	padding-right: 40px;
-	text-align: right;
-	font-size: 18px;}
-
-.str5 td.rz_5_2 img{
-	margin: 0;
-	font-weight: 100;
-	text-align: center;}
 
 /*Строка 6 */
 
