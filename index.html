@@ -30,7 +30,6 @@
 			let phone = $('.contacts input[name="phone"]').val();
 			let email = $('.contacts input[name="email"]').val();
 			let comment = $('.contacts .comment').val();
-			console.log('|||', name, phone, email, comment)
 			$.ajax({
 				type: "POST",
 				url: '../sendMail.php',
@@ -57,39 +56,6 @@
 		});
 	}	
 </script>
-  
- <!--<script type="text/javascript">
-	 $(function() {
-	 $(window).scroll(function() {console.log('|||');
-	 if($(this).scrollTop() != 0) {
-		$('#toTop').fadeIn();
-		} else {
-		$('#toTop').fadeOut();
-		}
-		});
-		$('#toTop').click(function() {
-		$('body,html').animate({scrollTop:0},800);
-		});
-	 });
-	 $(document).ready(function(){
-		$("#menu,#menu1,#menu2").on("click","a", function (event) {
-			//отменяем стандартную обработку нажатия по ссылке
-			event.preventDefault();
-
-			//забираем идентификатор бока с атрибута href
-			var id  = $(this).attr('href'),
-
-			//узнаем высоту от начала страницы до блока на который ссылается якорь
-				top = $(id).offset().top;
-			
-			//анимируем переход на расстояние - top за 1500 мс
-			$('body,html').animate({scrollTop: top}, 1500);
-		});
-	});
-	$(function() {
-	$("#telephone").mask("+7(999)999-99-99");
-	});
- </script>-->
 </head>
 <body>
 	<div class="container fon_1">
@@ -329,8 +295,6 @@
 		</div>
 	</div>
 	<div class="container contacts">
-		<div class="mail-success">Спасибо! Ваше сообщение отправлено. В ближайшее время наш менеджер свяжется с Вами</div>
-		<div class="mail-failed">Не получилось отправить сообщение. Пожалуйста, попробуйте ещё раз или позже</div>
 		<div class="row" id="application" method="POST" name="application" action="sendMail.php">
 			<input class="col-lg-2 col-md-3" name="name" id="applicationName" maxlength="15" placeholder="Имя" required pattern="^[А-Яа-яЁё\s]+$" title="Имя должно содержать только русские буквы" />
 			<input class="col-lg-2 col-md-3" id="telephone" name="phone" type="Tel" id="applicationTelephone"  placeholder="Телефон">
@@ -338,6 +302,8 @@
 			<textarea class="col-lg-4 col-md-3 comment" name="comment" placeholder="Комментарий"></textarea>
 			<button id="yak1" class="applicationButton">Оставить заявку</button>
 		</div>
+		<div class="mail-success">Спасибо! Ваше сообщение отправлено. В ближайшее время наш менеджер свяжется с Вами</div>
+		<div class="mail-failed">Не получилось отправить сообщение. Пожалуйста, попробуйте ещё раз или позже</div>		
 	</div>
 	<div class="container contacts-bottom">
 		<div class="row">

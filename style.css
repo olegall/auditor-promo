@@ -432,8 +432,8 @@
 .mail-success,
 .mail-failed {
 	display: none;
-	position: absolute;
-	top: 15px;
+	margin-top: 10px;
+	text-align: center;
 }
 
 .show-mail-result{
@@ -659,31 +659,31 @@
 
 /*Стили текста, выводящегося в placeholder*/
 ::-webkit-input-placeholder {
-    color: #efefef;
+    color: lightgrey;
     font-family: 'PT Sans', sans-serif;
     text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
 }
 
 ::-moz-placeholder  {
-    color: #fff;
+    color: lightgrey;
     font-family: 'PT Sans', sans-serif;
     text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
 }  /* Firefox 19+ */
 
 :-moz-placeholder {
-    color: #fff;
+    color: lightgrey;
     font-family: 'PT Sans', sans-serif;
     text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
 }  /* Firefox 18- */
 
 :-ms-input-placeholder {
-    color: #fff;
+    color: lightgrey;
     font-family: 'PT Sans', sans-serif;
     text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
 }
 
 ::placeholder {
-    color: #fff;
+    color: lightgrey;
     text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
 }
 
