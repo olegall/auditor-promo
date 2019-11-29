@@ -73,7 +73,7 @@
 
 
 
-/* |||||||||||||||||||||| ABOUT ||||||||||||||||||||||||| */
+/* ||||||||||||||||||||||||| ABOUT |||||||||||||||||||||||||||||| */
 
 .second {
 	margin-bottom: 50px;
@@ -110,6 +110,7 @@
 
 
 
+/* |||||||||||||||||||||||||||| бнглнфмнярх ||||||||||||||||||||||||| */
 
 .options {
 	margin-bottom: 50px;
@@ -159,7 +160,7 @@
 
 
 
-
+/* |||||||||||||||||||||| аеяокюрмн ||||||||||||||||||||||||||||| */
 
 .free .description {
     padding-top: 60px;
@@ -213,7 +214,10 @@
 	margin: 0 auto;
 }
 
+
+
 /* |||||||||||| опехлсыеярбю |||||||||||||| */
+
 .advantages {
 	background: #f3f3f3;
 	margin-bottom: 50px;
@@ -247,10 +251,10 @@
 	margin: 0;
 }
 
-.advantages .item img{
+.advantages .item img {
 	float: left;
 	margin-right: 10px;
-} 
+}
 
 .advantages .item p {
 	float: left;
@@ -472,6 +476,10 @@
 }
 
 @media (max-width: 768px) {
+	.fon_1 {
+		background: rgb(197, 206, 211);
+	}
+	
 	.title {
 		text-align: center;
 		margin-top: 50px;
@@ -573,7 +581,17 @@
 	}
 }
 
+@media (max-width: 500px) {
+	.fon_1 {
+		height: 820px;
+	}
+}
+
 @media (max-width: 440px) {
+	.fon_1 {
+		height: 850px;
+	}	
+	
 	.advantages .item {
 		padding-left: 0;
 	}
@@ -589,7 +607,18 @@
 	}	
 }
 
+@media (max-width: 380px) {
+	.fon_1 {
+		height: 900px;
+	}
+}
+
+
 @media (max-width: 350px) {
+	.fon_1 {
+		height: 950px;
+	}	
+	
 	.advantages .item {
 		max-width: 100%;
 		flex: none;
