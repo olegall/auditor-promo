@@ -95,12 +95,17 @@
 	<div class="container fon_1">
 		<div class="row cap">
 			<div class="col-lg-3">
-				<img class="logo" src="images/logo.png" alt="логотип БИТ">
+				<a href="http://www.bit-it.ru" target="_blank">
+					<img class="logo" src="images/logo.png" alt="логотип БИТ">
+				</a>
 			</div>
 			<div class="icon-wrapper col-lg-1 col-md-1 col-sm-4">
 				<img class="addr-icon" src="images/location.png" align="right" alt="адрес БИТ">
 			</div>
-			<p class="cap_text col-lg-2 col-md-5 col-sm-7">г.Рязань, ул.Октябрьская, д.61<br>www.bit-it.ru</p>
+			<p class="cap_text col-lg-2 col-md-5 col-sm-7">
+				г.Рязань, ул.Октябрьская, д.61<br>
+				<a class="url" href="http://www.bit-it.ru" target="_blank">www.bit-it.ru</a>
+			</p>
 			<div class="icon-wrapper col-lg-1 col-md-1 col-sm-4">
 				<img class="cap_icon" src="images/call.png" align="right" alt="телефон БИТ">
 			</div>
@@ -324,13 +329,15 @@
 		</div>
 	</div>
 	<div class="container contacts">
-		<form class="row" id="application" method="POST" name="application" action="sendMail.php">
+		<div class="mail-success">Спасибо! Ваше сообщение отправлено. В ближайшее время наш менеджер свяжется с Вами</div>
+		<div class="mail-failed">Не получилось отправить сообщение. Пожалуйста, попробуйте ещё раз или позже</div>
+		<div class="row" id="application" method="POST" name="application" action="sendMail.php">
 			<input class="col-lg-2 col-md-3" name="name" id="applicationName" maxlength="15" placeholder="Имя" required pattern="^[А-Яа-яЁё\s]+$" title="Имя должно содержать только русские буквы" />
 			<input class="col-lg-2 col-md-3" id="telephone" name="phone" type="Tel" id="applicationTelephone"  placeholder="Телефон">
 			<input class="col-lg-3 col-md-3" name="email" type="email" id="applicationEmail" maxlength="50" placeholder="E-mail"  pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"/ title="Пример: proverka@example.com">
 			<textarea class="col-lg-4 col-md-3 comment" name="comment" placeholder="Комментарий"></textarea>
 			<button id="yak1" class="applicationButton">Оставить заявку</button>
-		</form>
+		</div>
 	</div>
 	<div class="container contacts-bottom">
 		<div class="row">

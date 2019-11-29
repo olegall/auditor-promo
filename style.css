@@ -71,7 +71,10 @@
 	height:35px;
 }
 
-
+.fon_1 .url {
+	color: #1175c0 !important;
+    text-decoration: none;
+}
 
 /* ||||||||||||||||||||||||| ABOUT |||||||||||||||||||||||||||||| */
 
@@ -420,6 +423,21 @@
 
 .contacts-bottom .addr {
     text-align: center;
+}
+
+.contacts-bottom .url {	
+	text-decoration: none;
+}
+
+.mail-success,
+.mail-failed {
+	display: none;
+	position: absolute;
+	top: 15px;
+}
+
+.show-mail-result{
+	display: block;
 }
 
 @media (max-width: 1200px){
