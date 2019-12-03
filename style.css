@@ -22,6 +22,11 @@
 	padding: 0;
 }
 
+.logo-container {
+	margin: 0;
+	padding: 0;
+}
+
 .fon_1 .logo {
 	display: block;
 	width: 185px;
@@ -85,10 +90,6 @@
 
 .second .item {
 	text-align: center;
-}
-
-.second .title {
-	font-size: 26px;	
 }
 
 .second .icons {
@@ -421,7 +422,8 @@
     text-align: right;
 }
 
-.contacts-bottom .addr {
+.contacts-bottom .addr, 
+.contacts-bottom .title {
     text-align: center;
 }
 
@@ -466,8 +468,11 @@
 		margin-bottom: 10px;
 	}
 
-	.fon_1 .title {
+	h1 {
 		text-align: center;
+	}
+
+	.fon_1 .title {
 		margin-top: 50px;
 	}
 	
@@ -508,9 +513,6 @@
 }
 
 @media (max-width: 768px) {
-
-
-	
 	
 	.device-wrapper{
 		text-align: center;
@@ -623,10 +625,11 @@
 		margin: 0 auto;
 		float: none;
 	}
+	
 	.advantages .item p {
 		width: 100%;
 		text-align: center;
-	}	
+	}
 }
 
 @media (max-width: 380px) {
@@ -637,9 +640,27 @@
 
 
 @media (max-width: 350px) {
+	h1 {
+		text-align: center;
+	}
+
 	.fon_1 {
-		height: 950px;
+		height: 740px;
+		padding: 10px !important;
 	}	
+	
+	.claim-btn {
+		width: 100% !important;
+	}
+	
+	.auditor img, .free img {
+		width: 100%;
+	}
+	
+	.icon-wrapper {
+		flex: 25%;
+		max-width: 25%;
+	}
 	
 	.advantages .item {
 		max-width: 100%;
