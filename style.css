@@ -62,13 +62,13 @@
 
 .cap button {
 	display: block;
+	width: 150px;
+	height: 35px;
 	margin: 0 auto;
 	margin-top: 10px;
 	background: #1175c0;
 	color: white;
 	border: none;
-	width:150px;
-	height:35px;
 }
 
 .fon_1 .url {
@@ -458,9 +458,23 @@
 }
 
 @media (max-width: 991px){
+	.fon_1 {
+		background: rgb(197, 206, 211);
+	}
+	
 	.fon_1 .logo {
 		margin-bottom: 10px;
 	}
+
+	.fon_1 .title {
+		text-align: center;
+		margin-top: 50px;
+	}
+	
+	.fon_1 .claim-btn {
+		display: block;
+		margin: 0 auto;
+	}	
 	
 	.advantages h1 {
 		border: 0;
@@ -494,19 +508,9 @@
 }
 
 @media (max-width: 768px) {
-	.fon_1 {
-		background: rgb(197, 206, 211);
-	}
-	
-	.title {
-		text-align: center;
-		margin-top: 50px;
-	}
 
-	.claim-btn {
-		display: block;
-		margin: 0 auto;
-	}	
+
+	
 	
 	.device-wrapper{
 		text-align: center;
@@ -531,8 +535,8 @@
 	}
 	
 	.tariff .price {
-		flex: 27%;
-		max-width: 27%;
+		flex: 26%;
+		max-width: 26%;
 		margin-right: 34px;
 	}	
 	

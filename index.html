@@ -21,8 +21,10 @@
 		$('#toTop').click(function() {
 			$('body,html').animate({scrollTop:0},800);
 		});
+		$('.fon_1 .call').css('width', '160px'); // !!! хак 
+		$('.contacts button').css('width', '200px'); // !!! хак
 	});
-	 
+
 	$(document).ready(function(){
 		animate('.call, .claim-btn, .free button', '.contacts', 1500);
 		$('.contacts button').click(function(){
@@ -246,7 +248,7 @@
 		<div class="row prices">
 			<div class="col-sm-3 price">
 				<span>1</span>
-				<p>рабочее место</p>
+				<p>рабочих мест</p>
 				<hr>
 				<p>1200 руб.</p>
 			</div>
