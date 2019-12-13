@@ -5,7 +5,7 @@
 <title>БИТ</title>
 <link rel="stylesheet" type="text/css" href="style.css" >
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js\jquery.maskedinput.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -21,13 +21,14 @@
 		$('#toTop').click(function() {
 			$('body,html').animate({scrollTop:0},800);
 		});
-		$('.fon_1 .call').css('width', '160px'); // !!! хак 
-		$('.contacts button').css('width', '200px'); // !!! хак
+		$('.fon_1 .call').css('width', '160px'); // !!! хак. перекрываю для Айфона. убрать
+		$('.contacts button').css('width', '205px'); // !!! хак. перекрываю для Айфона. убрать
 	});
 
 	$(document).ready(function(){
 		animate('.call, .claim-btn, .free button', '.contacts', 1500);
 		$('.contacts button').click(function(){
+			validate();
 			let name = $('.contacts input[name="name"]').val();
 			let phone = $('.contacts input[name="phone"]').val();
 			let email = $('.contacts input[name="email"]').val();
@@ -41,8 +42,9 @@
 					   comment: comment}
 			}).done(function(result) {
 				result ? 
-				$(".mail-success").addClass('show-mail-result').fadeOut( 5000, function() {}) : 
-				$(".mail-failed").addClass('show-mail-result').fadeOut( 5000, function() {});
+				$(".mail-success").attr('style', 'none').addClass('show-mail-result').fadeOut( 10000, function() {}) : 
+				$(".mail-failed").attr('style', 'none').addClass('show-mail-result').fadeOut( 10000, function() {});
+				$('.contacts input, .contacts textarea').val('');
 			});
 		});		
 	});
@@ -53,10 +55,22 @@
 	
 	function animate(from, to, duration) {
 		$(from).click(function() {
-			let top = $(to).offset().top;				
+			let top = $(to).offset().top;
 			$('body, html').animate({scrollTop: top}, duration);
 		});
 	}	
+	
+	function validate(){
+		let inputs = Array.from($('.contacts .name, .contacts .email'));
+		console.log(inputs);
+		inputs.forEach(function (input, idx) {
+			input.classList.remove('validation-failed');
+			if (!input.value){
+				input.classList.add('validation-failed');
+				throw 'Не заполнено поле';
+			}
+		});	
+	}
 </script>
 </head>
 <body>
@@ -86,11 +100,11 @@
 			<h1 class="title col-lg-6">Мобильное рабочее место аудитора</h1>
 		</div>
 		<div class="row">
-			<div class="description col-lg-6">
+			<div class="description col-lg-7">
 				Эффективное проведение аудитов и проверок на предприятии. 
 				Предназначено для проведения внутренних аудитов, проверок, 
-				<br>испытаний на соответствие стандартам и требованиям
-				<br>по запланированной программе<br><br>
+				испытаний на соответствие стандартам и требованиям
+				по запланированной программе<br><br>
 				<button class="claim-btn">Оставить заявку</button>
 			</div>
 		</div>		
@@ -159,7 +173,11 @@
 					<p class="col-md-4">
 						<img src="images/str4_1.png" alt="бесплатные обновления">
 					</p>
-					<p class="col-md-8 col-xs-12 description">Бесплатные обновления<br>Бесплатные консультации в течение 30 дней</p>
+					<p class="col-md-8 col-xs-12 description">
+						Бесплатные обновления<br>
+						Бесплатные консультации в течение 30 дней<br>
+						Бесплатный доступ к демо базе
+					</p>
 				</div>
 			</div>
 			<div class="col-md-3 button-container">
@@ -168,6 +186,11 @@
 				</a>
 			</div>
 		</div>
+		<p class="details">
+			Демонстрационная база имеет настроенный вид аудита по стандарту 
+			ГОСТ Р 56406-2015 «БЕРЕЖЛИВОЕ ПРОИЗВОДСТВО. Аудит. Вопросы для оценки системы менеджмента». 
+			Введены нокаут-вопросы и критерии оценки степени выполнения требований стандарта (раздел 4. Оценка СМБП).
+		</p>		
 	</div>
 	<div class="container infrastructure">
 		<div class="row row-mobile-app">
@@ -282,27 +305,15 @@
 				<hr>
 				<p>68570 руб.</p>
 			</div>
-			<div class="col-sm-2 price">
-				<span>300</span>
-				<p>рабочих мест</p>
-				<hr>
-				<p>203420 руб.</p>
-			</div>
-			<div class="col-sm-2 price">
-				<span>500</span>
-				<p>рабочих мест</p>
-				<hr>
-				<p>337140 руб.</p>
-			</div>			
 		</div>
 	</div>
 	<div class="container contacts">
-		<div class="row" id="application" method="POST" name="application" action="sendMail.php">
-			<input class="col-lg-2 col-md-3" name="name" id="applicationName" maxlength="15" placeholder="Имя" required pattern="^[А-Яа-яЁё\s]+$" title="Имя должно содержать только русские буквы" />
+		<div class="row" id="application" method="POST" name="application">
+			<input class="col-lg-2 col-md-3 name" name="name" id="applicationName" maxlength="15" placeholder="Имя *" required pattern="^[А-Яа-яЁё\s]+$" title="Имя должно содержать только русские буквы" />
 			<input class="col-lg-2 col-md-3" id="telephone" name="phone" type="Tel" id="applicationTelephone"  placeholder="Телефон">
-			<input class="col-lg-3 col-md-3" name="email" type="email" id="applicationEmail" maxlength="50" placeholder="E-mail"  pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"/ title="Пример: proverka@example.com">
+			<input class="col-lg-3 col-md-3 email" name="email" type="email" id="applicationEmail" maxlength="50" placeholder="E-mail *"  pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"/ title="Пример: proverka@example.com">
 			<textarea class="col-lg-4 col-md-3 comment" name="comment" placeholder="Комментарий"></textarea>
-			<button id="yak1" class="applicationButton">Оставить заявку</button>
+			<button id="yak1" class="applicationButton">Отправить заявку</button>
 		</div>
 		<div class="mail-success">Спасибо! Ваше сообщение отправлено. В ближайшее время наш менеджер свяжется с Вами</div>
 		<div class="mail-failed">Не получилось отправить сообщение. Пожалуйста, попробуйте ещё раз или позже</div>		

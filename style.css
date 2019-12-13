@@ -167,9 +167,14 @@
 /* |||||||||||||||||||||| ¡≈—œÀ¿“ÕŒ ||||||||||||||||||||||||||||| */
 
 .free .description {
-    padding-top: 60px;
+    padding-top: 20px;
     text-align: center;
 	font-family: arial;
+	font-size: 22px;
+}
+
+.free .details {
+	margin-top: 50px;
 	font-size: 18px;
 }
 
@@ -343,6 +348,10 @@
 	max-width: 11%;
 }
 
+.tariff .price:first-child {
+	margin-left: 150px;	
+}
+
 .tariff .price hr {
 	width: 100px;
 	border-top: 1px solid #8c8787;
@@ -405,6 +414,20 @@
 
 .contacts textarea {
 	height: 50px;
+	line-height: 45px;
+	overflow: hidden;
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color: red;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: red;
+}
+
+::placeholder {
+  color: red;
 }
 
 .contacts-bottom {
@@ -422,8 +445,7 @@
     text-align: right;
 }
 
-.contacts-bottom .addr, 
-.contacts-bottom .title {
+.contacts-bottom .addr {
     text-align: center;
 }
 
@@ -439,7 +461,13 @@
 }
 
 .show-mail-result{
-	display: block;
+    display: block;
+    background: white;
+    width: 280px;
+    border: 1px solid #c3c3c3;
+    padding: 11px;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 
 @media (max-width: 1200px){
@@ -447,6 +475,10 @@
 		flex: 15%;
 		max-width: 15%;
 		margin-bottom: 30px;
+	}
+	
+	.tariff .price:first-child{
+		margin-left: 0;		
 	}
 	
 	.contacts input, .contacts textarea {
@@ -514,7 +546,7 @@
 
 @media (max-width: 768px) {
 	
-	.device-wrapper{
+	.device-wrapper {
 		text-align: center;
 	}	
 	
@@ -596,8 +628,9 @@
 		margin-bottom: 30px;
 	}	
 	
-	.contacts-bottom .url-wrapper {
-		text-align: center !important;
+	.contacts-bottom .url-wrapper, 
+	.contacts-bottom .title {
+		text-align: center;
 	}
 	
 	.contacts-bottom .addr {
@@ -710,6 +743,10 @@
 ::placeholder {
     color: lightgrey;
     text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+
+.validation-failed::-webkit-input-placeholder {
+    color: red;
 }
 
 #toTop {
