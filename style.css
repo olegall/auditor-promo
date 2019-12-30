@@ -918,5 +918,13 @@ max-width: 100%;
 }
 /*Стили для слайдера --Конец--*/
 
+.video h1 {
+	text-align: center;
+}
+
+.video iframe {
+	margin-bottom: 100px;
+}
+
 </style>
 
